@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Pantry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Musical Pantry: Sound of Ingredient</h1>
+
+    <div id="pantry-grid" class="pantry-grid">
+        <div class="ingredient-card">
+            <div class="image-container">
+                <img src="red-onion.jpg" alt="Red Onion">
+                <button class="info-btn" onclick="showMath()">+</button>
+            </div>
+            <h3>Red Onion</h3>
+            <button class="play-btn" onclick="toggleMusic('onion-audio')">播放音频</button>
+            <audio id="onion-audio" src="red-onion.mp3"></audio> 
+        </div>
+    </div>
+
+    <div id="math-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMath()">&times;</span>
+            <h2>Sonification Logic: Red Onion</h2>
+            <p id="math-text">加载中...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

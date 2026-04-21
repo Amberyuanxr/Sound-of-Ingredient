@@ -1,54 +1,73 @@
-/* 全局样式 */
+/* =========================================
+   1. 全局基础样式 (Global Styles)
+   ========================================= */
 body { 
-    font-family: 'Playfair Display', serif; /* 使用新字体 */
+    font-family: 'Playfair Display', serif; /* 使用优雅的衬线字体 */
     text-align: center; 
-    background-color: #fcfaf7; /* 稍微带一点米白色，像高级纸张 */
+    background-color: #fcfaf7; /* 米白色背景，模拟高级纸张感 */
     color: #2c3e50; 
     padding: 40px 20px;
+    line-height: 1.6;
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    font-style: italic; /* 斜体标题在 Playfair 下非常漂亮 */
+    font-style: italic; 
     margin-bottom: 40px;
 }
 
-/* 栅格布局 */
+/* =========================================
+   2. 布局与卡片 (Grid & Card)
+   ========================================= */
 .pantry-grid { 
     display: flex; 
     justify-content: center; 
 }
 
-/* 卡片设计 */
 .ingredient-card { 
     background: white; 
-    border-radius: 4px; /* 衬线体配直角或小圆角更有艺术感 */
+    border-radius: 4px; 
     padding: 25px; 
     box-shadow: 0 15px 35px rgba(0,0,0,0.05); 
     width: 300px;
     border: 1px solid #eee;
 }
 
-.image-container { position: relative; }
+.image-container { 
+    position: relative; 
+}
+
 .image-container img { 
     width: 100%; 
     border-radius: 2px; 
-    filter: sepia(10%); /* 稍微增加一点复古调色 */
+    filter: sepia(10%); /* 复古滤镜 */
+    display: block; /* 消除图片下方的细微间隙 */
 }
 
-/* "+" 按钮 */
+/* =========================================
+   3. 按钮交互 (Buttons)
+   ========================================= */
 .info-btn { 
-    position: absolute; top: 10px; right: 10px; 
-    width: 32px; height: 32px; border-radius: 50%; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
     border: 1px solid #2c3e50; 
     background: white; 
     cursor: pointer; 
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-/* 播放按钮 */
+.info-btn:hover {
+    background: #2c3e50;
+    color: white;
+}
+
 .play-btn { 
     margin-top: 20px; 
     width: 100%; 
@@ -61,45 +80,80 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
     letter-spacing: 1px;
+    transition: opacity 0.3s;
 }
 
-/* 弹窗样式 */
-.modal-content { 
-    font-family: 'Playfair Display', serif;
-    background: white; 
-    margin: 10% auto; 
-    padding: 40px; 
-    width: 80%; 
-    max-width: 600px; 
-    line-height: 1.6; /* 增加行间距，方便阅读数学原理 */
+.play-btn:hover {
+    opacity: 0.9;
 }
-* Styling for the Math Explanation Layout */
+
+/* =========================================
+   4. 弹窗与教科书数学公式 (Modal & Math)
+   ========================================= */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content { 
+    background: white; 
+    margin: 5% auto; 
+    padding: 40px; 
+    width: 85%; 
+    max-width: 650px; 
+    border-radius: 8px;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto; /* 内容过多时可滚动 */
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* 数学解释区域布局 */
 .math-explanation {
     text-align: left;
-    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
 }
 
-.regression-image-container {
-    background: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #eee;
-    margin: 15px 0;
-    text-align: center;
-}
-
+/* 教科书级数学公式框 */
 .formula-box {
-    background: #2c3e50;
-    color: white;
-    padding: 15px;
-    border-radius: 4px;
+    background: #2c3e50; /* 深色背景增强对比 */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
     text-align: center;
-    font-size: 1.2rem;
-    margin: 15px 0;
+    font-size: 1.4rem; /* 增大公式字号 */
+    margin: 20px 0;
+    font-family: 'Times New Roman', serif; /* 经典的数学字体 */
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.3);
 }
 
+/* Desmos 回归图像容器 */
+.regression-image-container {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #2c3e50; /* 重点标注线 */
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* 音乐编排列表 */
 .arrangement-list {
     padding-left: 20px;
     line-height: 1.8;
 }
-.formula-box
-.regression-image-container
+
+.arrangement-list li {
+    margin-bottom: 8px;
+}

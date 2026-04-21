@@ -73,3 +73,31 @@ h1 {
     max-width: 600px; 
     line-height: 1.6; /* 增加行间距，方便阅读数学原理 */
 }
+* Styling for the Math Explanation Layout */
+.math-explanation {
+    text-align: left;
+    color: #2c3e50;
+}
+
+.regression-image-container {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.formula-box {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.arrangement-list {
+    padding-left: 20px;
+    line-height: 1.8;
+}

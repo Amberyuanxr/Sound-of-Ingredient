@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musical Pantry</title>
+    <title>Musical Pantry: Sound of Ingredient</title>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,21 +12,52 @@
     <h1>Musical Pantry: Sound of Ingredient</h1>
 
     <div id="pantry-grid" class="pantry-grid">
+        
         <div class="ingredient-card">
             <div class="image-container">
-                < img src="red-onion.jpg" alt="Red Onion">
-                <button class="info-btn" onclick="showMath()">+</button>
+                <img src="red-onion.jpg" alt="Red Onion">
+                <button class="info-btn" onclick="showMath('onion')">+</button>
+                <button class="play-btn" onclick="toggleMusic('onion-audio')">🎵</button>
             </div>
             <h3>Red Onion</h3>
-            <button class="play-btn" onclick="toggleMusic('onion-audio')">Play Audio</button>
             <audio id="onion-audio" src="red-onion.mp3"></audio> 
         </div>
+
+        <div class="ingredient-card">
+            <div class="image-container">
+                <img src="star-fruit.jpg" alt="Star Fruit">
+                <button class="info-btn" onclick="showMath('starfruit')">+</button>
+                <button class="play-btn" onclick="toggleMusic('starfruit-audio')">🎵</button>
+            </div>
+            <h3>Star Fruit</h3>
+            <audio id="starfruit-audio" src="star-fruit.mp3"></audio> 
+        </div>
+
+        <div class="ingredient-card">
+            <div class="image-container">
+                <img src="avocado.jpg" alt="Avocado">
+                <button class="info-btn" onclick="showMath('avocado')">+</button>
+                <button class="play-btn" onclick="toggleMusic('avocado-audio')">🎵</button>
+            </div>
+            <h3>Avocado</h3>
+            <audio id="avocado-audio" src="avocado.mp3"></audio> 
+        </div>
+
+        <div class="ingredient-card">
+            <div class="image-container">
+                <img src="romanesco.jpg" alt="Romanesco">
+                <button class="info-btn" onclick="showMath('romanesco')">+</button>
+                <button class="play-btn" onclick="toggleMusic('romanesco-audio')">🎵</button>
+            </div>
+            <h3>Romanesco</h3>
+            <audio id="romanesco-audio" src="romanesco.mp3"></audio> 
+        </div>
+
     </div>
 
     <div id="math-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeMath()">&times;</span>
-            <h2>Sonification Logic: Red Onion</h2>
             <div id="math-text">加载中...</div>
         </div>
     </div>
@@ -34,4 +65,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

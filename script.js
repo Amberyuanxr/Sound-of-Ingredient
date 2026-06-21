@@ -1,68 +1,77 @@
-/**
- * SONIFICATION LOGIC: RED ONION
- * This script handles the interactive components of the Musical Pantry project.
- * It bridges geometric regression data with audio composition strategy.
- */
-
-// Function to display the Mathematical and Compositional Process
-function showMath() {
+function showMath(ingredient) {
     const modal = document.getElementById('math-modal');
     const text = document.getElementById('math-text');
-    
-    /**
-     * CONTENT SYNTHESIS:
-     * 1. [span_2](start_span)[span_3](start_span)Geometric Regression: Proves data-driven origin using Desmos[span_2](end_span)[span_3](end_span).
-     * 2. [span_4](start_span)Mathematical Modeling: Establishes the Arithmetic Progression (AP)[span_4](end_span).
-     * 3. [span_5](start_span)Audio Strategy: Explains the 'Math-to-Music' translation[span_5](end_span).
-     */
-    text.innerHTML = `
-        <div class="math-explanation">
-            <h3>1. Geometric Regression (Desmos Analysis)</h3>
-            [span_6](start_span)<p>To establish a data-driven foundation, I performed photographic analysis on a Red Onion cross-section[span_6](end_span). [span_7](start_span)Using non-linear regression in Desmos, I mapped the boundary of the onion to determine its physical scale[span_7](end_span).</p >
-            
+    let content = "";
+
+    if (ingredient === 'onion') {
+        content = `
+            <h3>1. Geometric Regression (Red Onion)</h3>
+            <p>I mapped the concentric circles of the onion using non-linear regression in Desmos to trace its physical layers.</p>
             <div class="regression-image-container">
-                < img src="red-onion-function.jpg" alt="Desmos Regression Analysis" style="width:100%; border-radius:4px;">
-                <p style="font-size: 0.8rem; font-style: italic; margin-top: 5px;">
-                    <strong>Regression Model:</strong> $(y_1 - b)^2 \\sim r - (x_1 - a)^2$ | [span_8](start_span)<strong>Max Radius (r):</strong> $\\approx 19.47$[span_8](end_span).
-                </p >
+                <img src="red-onion-function.jpg" style="width:100%; border-radius:2px;">
             </div>
-
             <h3>2. Mathematical Modeling</h3>
-            [span_9](start_span)<p>The growth pattern of the onion's concentric rings follows an <strong>Arithmetic Progression (AP)</strong>[span_9](end_span):</p >
-            <div class="formula-box">
-                $$r_{n} = r_{1} + (n-1)d$$
-            </div>
-            [span_10](start_span)<p>Based on the 9 identified physical rings, the common difference (average width) is established as $d \\approx 2.17$[span_10](end_span).</p >
-
+            <div class="formula-box">$$r_{n} = r_{1} + (n-1)d$$</div>
+            <p>The 9 rings follow an <strong>Arithmetic Progression</strong> with a common difference of $d \\approx 2.17$.</p>
             <h3>3. Audio Composition Strategy</h3>
-            [span_11](start_span)<p>Using <strong>additive synthesis</strong>, the mathematical parameters dictate the musical arrangement[span_11](end_span). [span_12](start_span)The 9 rings are quantized into three distinct movements[span_12](end_span):</p >
-            <ul class="arrangement-list">
-                [span_13](start_span)<li><strong>Movement I (Rings 1-3):</strong> Dense core represented by low-frequency cutting onions sound[span_13](end_span).</li>
-                [span_14](start_span)<li><strong>Movement II (Rings 4-6):</strong> Development phase using melodic synth layers that increase in brightness as the radius ($r_{n}$) grows[span_14](end_span).</li>
-                [span_15](start_span)<li><strong>Movement III (Rings 7-9):</strong> Climax featuring high-frequency textures and a higher ocatave in main melody[span_15](end_span).</li>
-            </ul>
-        </div>
-    `;
-    
-    // Display the modal
+            <p>The 9 layers are quantized into a 3-movement structure using additive synthesis: Bass (Rings 1-3), Melodic Synth (Rings 4-6), and Found-sound Percussion (Rings 7-9).</p>
+        `;
+    } 
+    else if (ingredient === 'starfruit') {
+        content = `
+            <h3>1. Polar Symmetry (Star Fruit)</h3>
+            <p>The star fruit exhibits beautiful 5-fold <strong>Dihedral Symmetry (D5)</strong>, which cannot be modeled by simple circles.</p>
+            <div class="regression-image-container">
+                <img src="starfruit-function.jpg" style="width:100%; border-radius:2px;">
+            </div>
+            <h3>2. Mathematical Modeling</h3>
+            <div class="formula-box">$$r(\\theta) = R_{avg} \\cdot (1 + A \\cos(5\\theta))$$</div>
+            <p>Using a polar periodic equation, the 5 peaks in the radius directly represent the 5 sharp ribs of the fruit.</p>
+            <h3>3. Audio Composition Strategy</h3>
+            <p>The 5-fold architecture translates directly into a rhythmic <strong>5/4 time signature</strong> and a 5-note <strong>Pentatonic Scale</strong>, utilizing sharp pluck synths to match its ridges.</p>
+        `;
+    } 
+    else if (ingredient === 'avocado') {
+        content = `
+            <h3>1. Asymmetric Ovoid Regression (Avocado)</h3>
+            <p>An avocado slice presents an asymmetric egg-shape (ovoid) paired with a perfectly circular concentric seed core.</p>
+            <div class="regression-image-container">
+                <img src="avocado-function.jpg" style="width:100%; border-radius:2px;">
+            </div>
+            <h3>2. Mathematical Modeling</h3>
+            <div class="formula-box">$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2(1 + kx)} = 1$$</div>
+            <p>I utilized a modified elliptical regression (wobble/ovoid equation) to account for the tapering top of the fruit layout.</p>
+            <h3>3. Audio Composition Strategy</h3>
+            <p>The smooth, thick green flesh is translated into warm, low-pass filtered sub-bass pads, while the seed represents a steady, grounded structural tone.</p>
+        `;
+    } 
+    else if (ingredient === 'romanesco') {
+        content = `
+            <h3>1. Self-Similar Fractals (Romanesco Broccoli)</h3>
+            <p>Romanesco is a textbook example of a natural <strong>fractal</strong>, where each bud is composed of a series of smaller buds.</p>
+            <div class="regression-image-container">
+                <img src="romanesco-function.jpg" style="width:100%; border-radius:2px;">
+            </div>
+            <h3>2. Mathematical Modeling</h3>
+            <div class="formula-box">$$z_{n+1} = z_{n}^2 + c \\quad \\text{or} \\quad F_{n} = F_{n-1} + F_{n-2}$$</div>
+            <p>The spirals follow the <strong>Fibonacci Sequence</strong> and log-spiral geometry, scaling down infinitely by a constant ratio.</p>
+            <h3>3. Audio Composition Strategy</h3>
+            <p>To sonify infinite self-similarity, I used a **Polyphony** (an auditory illusion of a sound that infinitely cascades downward) combined with generative arpeggios structured around Fibonacci numbers.</p>
+        `;
+    }
+
+    text.innerHTML = content;
     modal.style.display = "block";
 
-    // Trigger MathJax to render the LaTeX formulas into textbook-quality typography
     if (window.MathJax) {
         MathJax.typeset();
     }
 }
 
-// Function to close the Modal
 function closeMath() {
-    const modal = document.getElementById('math-modal');
-    modal.style.display = "none";
+    document.getElementById('math-modal').style.display = "none";
 }
 
-/**
- * AUDIO CONTROL LOGIC
- * Toggles the sonification track based on the element ID.
- */
 function toggleMusic(audioId) {
     const audio = document.getElementById(audioId);
     if (audio.paused) {

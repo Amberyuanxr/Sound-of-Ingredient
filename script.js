@@ -12,7 +12,7 @@ function showMath(ingredient) {
             </div>
             <h3>2. Mathematical Modeling</h3>
             <div class="formula-box">$$r_{n} = r_{1} + (n-1)d$$</div>
-            <p>The 9 rings follow an <strong>Arithmetic Progression</strong> with a common difference of $d \\approx 2.17$.</p>
+            <p>The 9 rings follow an <strong>Arithmetic Progression</strong> with a common difference of $d \\approx 2.17.</p>
             <h3>3. Audio Composition Strategy</h3>
             <p>The 9 layers are quantized into a 3-movement structure using additive synthesis: Bass (Rings 1-3), Melodic Synth (Rings 4-6), and Found-sound Percussion (Rings 7-9).</p>
         `;
@@ -39,8 +39,8 @@ function showMath(ingredient) {
                 <img src="avocado-function.jpg" style="width:100%; border-radius:2px;">
             </div>
             <h3>2. Mathematical Modeling</h3>
-            <div class="formula-box">$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2(1 + kx)} = 1$$</div>
-            <p>I utilized a modified elliptical regression (wobble/ovoid equation) to account for the tapering top of the fruit layout.</p>
+            <div class="formula-box">$$\\y=a{x^2}+bx+c$$</div>
+            <p>I utilized two simple quadratic equations to account for the top and bottom of the fruit layout.</p>
             <h3>3. Audio Composition Strategy</h3>
             <p>The smooth, thick green flesh is translated into warm, low-pass filtered sub-bass pads, while the seed represents a steady, grounded structural tone.</p>
         `;
